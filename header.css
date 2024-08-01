@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root{
+    --color-primary:#333333;
+    --color-secondary:#713CEB;
+    --button-bg:#713CEB;
+    --button-label:#FFFFFF;
+    --border-radius:.3rem;
+    --button-font-weight:530;
+    --body-color:#D5C4A2 ;
+    --body-color:#fff ;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  width:100%;
+  background-color:var(--body-color);
+}
+
+
+@media (max-width: 658px){
+    html{
+        font-size: 80%;
+    }
+}
+
+a.button{
+    padding: .7rem 1.2rem;
+    background-color:var(--button-bg);
+    color:var(--button-label);
+    border-radius: var(--border-radius);
+    font-weight: var(--button-font-weight);
+    transition: .2s;
+
+}
+a.button:hover{
+scale: 1.05;
+}
+
+header.dark{
+    --color-primary:#333333;
+}
+header.light{
+    --color-primary:#fff;
+}
+
+header.header{
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 40px;
+    padding: 3rem 3rem;
+
+}
+@media (max-width: 658px){
+header .logo img{
+    height: 3rem;
+}
+}
+header ul.navbar  {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    height: 40px;
+    gap: 3rem;
+
+}
+header ul.navbar  li.item  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+header ul.navbar  li.item.active::after  {
+    content:'';
+    position: absolute;
+    width: 80%;
+    height:4px;
+    background: var(--button-bg);
+    bottom: -8px;
+    border-radius: .3rem;
+
+
+
+}
+header ul.navbar  li.item a {
+color:var(--color-primary)
+}
+
+header ul.navbar  li.item:hover a {
+    color:var(--color-secondary)
+}
+@media (max-width: 658px){
+header ul.navbar  {
+display: none;
+}
+header a.signup {
+display: none;
+}
+}
+/* handle dropdown menu on mobile devices starts */
+
+header ul.navbar.dropdown  {
+    animation: animatedropdown .3s ease-in-out;
+}
+@keyframes animatedropdown{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+header ul.navbar.dropdown.active  {
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:var(--body-color);
+
+
+
+};
+
+header ul.navbar.dropdown  li.item.active::after   {
+display: none;
+height: 0;
+}
+header ul.navbar.dropdown  li.item.active a {
+    color: var(--color-secondary);
+}
+
+header a.humberger{
+display: none;
+align-items: center;
+justify-content: space-around;
+flex-direction: column;
+position: relative;
+width: 30px;
+height: 20px;
+gap:.1rem;
+z-index: 4;
+}
+header a.humberger .line{
+    transition: .4s;
+}
+@media (max-width: 658px){
+header a.humberger{
+display: flex;
+}}
+header a.humberger.active{
+justify-content: center;
+}
+header a.humberger.active :nth-child(1){
+    transform: rotate(-40deg);
+    position: absolute;
+}
+header a.humberger.active :nth-child(3){
+    transform: rotate(40deg);
+    position: absolute;
+}
+header a.humberger.active .middle{
+    display: none;
+}
+
+header a.humberger .line{
+
+    background: black;
+    height: 3px;
+    width:100%;
+    border-radius: 10rem;
+
+
+}
+
+.profile_image_container {
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    justify-content: center;
+    position: relative;
+
+
+}
+@media (max-width: 658px) {
+
+.profile_image_container {
+    display: none;
+}}
+.profile_image_container span{
+font-size: 1.3rem;
+}
+.profile_image_container span span.activeImg{
+    margin: 0.2rem;
+font-size: 0.5rem;
+
+}
+.profile_image_container img.profile_image {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+/*.profile_image_container*/
+
+ul.options{
+top: 0;
+right: 0;
+margin-top: calc(1rem + 50px);
+padding:1rem;
+min-width: 10rem;
+border:2px  outset black;
+display: none;
+flex-direction: column;
+align-items:center;
+justify-content: center;
+flex-wrap: nowrap;
+gap: 1rem;
+background: #fff;
+position: absolute;
+z-index: 100;
+
+}
+ul.options.active{
+display: flex;
+}
+
+ul.options li   {
+    width: 100%;
+}
+ul.options li a   {
+    width: 100%;
+    font-weight:700;
+    color:#333333;
+}
+/* handle dropdown menu on mobile devices ends */

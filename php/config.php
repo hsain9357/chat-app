@@ -12,14 +12,14 @@ foreach($lines as $line){
 }
 
  // Retrive env variable
-  //$username = getenv('USER_NAME');
-//  $hostname = getenv('HOST');
- // $password = getenv('PASSWORD');
-//  $dbname = getenv('sql5680846');
+//$username = getenv('USER_NAME');
+ //$hostname = getenv('HOST');
+// $password = getenv('PASSWORD');
+ //$dbname = getenv('DATABASE');
 
   $hostname = "localhost:3306";
   $username = "hussein";
-  $password = "password";
+ $password = "password";
   $dbname = "chatapp";
 
   $conn = mysqli_connect($hostname, $username, $password, $dbname);

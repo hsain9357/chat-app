@@ -5,41 +5,65 @@
     header("location: login.php");
   }
 ?>
-<?php include_once "header.php"; ?>
-
-?>
-
-<body class='chat'>
-<div class="wrapper userswrapper <?php echo isset($_GET['user_id'])?"actv":"" ?>">
-    <section class="users">
-      <header>
-        <div class="content">
-          <?php
+<?php
             $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
             if(mysqli_num_rows($sql) > 0){
-              $row = mysqli_fetch_assoc($sql);
+                $row = mysqli_fetch_assoc($sql);
             }
-          ?>
+?>
+
+<?php
+
+$shoudGetStartedButtonAppear =  false;
+$isDarkText = true;
+?>
+<?php include_once "header.php"; ?>
+<link rel="stylesheet" href="users.css">
+
+
+<body class='chat'>
+<?php include_once "header2.php"; ?>
+<div class="wrapper userswrapper <?php echo isset($_GET['user_id'])?"actv":"" ?>">
+    <section class="users">
+      <header class="chat">
+        <div class="content">
           <img src="php/images/<?php echo $row['img']; ?>" alt="">
           <div class="details">
             <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
             <p><?php echo $row['status']; ?></p>
           </div>
         </div>
-        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
+<div class="options_container">
+        <button class="options_humb ">
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</button>
+<ul class="options dropdown ">
+<li>
+<a href="">Change image</a>
+</li>
+<li>
+<a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
+
+</li>
+<li>
+<a href="">Delete Account</a>
+</li>
+</ul>
+</div>
       </header>
       <div class="search">
-        <span class="text">Select an user to start chat</span>
+        <span class="text">Select a user to start chat</span>
         <input type="text" placeholder="Enter name to search...">
         <button><i class="fas fa-search"></i></button>
       </div>
       <div class="users-list">
-
       </div>
     </section>
   </div>
 
-  <script src="javascript/users.js"></script>
+  <script src="javascript/users.js" async></script>
 
 <!-- chat section starts-->
     <div class="wrapper chatwrapper <?php echo isset($_GET['user_id'])?"actv":"notactv" ?>">
