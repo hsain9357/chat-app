@@ -1,16 +1,17 @@
 <?php
   session_start();
   if(isset($_SESSION['unique_id'])){
-    header("location: users.php");
+    header("location: /users.php");
   }
 ?>
 
 <?php
 $shoudGetStartedButtonAppear =  false;
+$styleMain =  true;
 ?>
 
-<?php include_once "header.php"; ?>
-<?php include_once "header2.php"; ?>
+<?php include_once "./util/header.php"; ?>
+<?php include_once "./util/header2.php"; ?>
 <body>
   <div class="wrapper signin">
     <section class="form login">
@@ -30,12 +31,12 @@ $shoudGetStartedButtonAppear =  false;
           <input type="submit" name="submit" value="Continue to Chat">
         </div>
       </form>
-      <div class="link">Not yet signed up? <a href="./signup.php">Signup now</a></div>
+      <div class="link">Not yet signed up? <a href="/signup.php">Signup now</a></div>
     </section>
   </div>
 
-  <script src="javascript/pass-show-hide.js"></script>
-  <script src="javascript/login.js"></script>
+  <script src="./javascript/pass-show-hide.js"></script>
+  <script src="./javascript/login.js"></script>
 
 </body>
 </html>

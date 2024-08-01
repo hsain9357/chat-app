@@ -1,6 +1,9 @@
 /*  header starts*/
 /* header ends*/
 
+body{
+    margin-top: 0 ;
+}
 
 section.banner{
     position: relative;

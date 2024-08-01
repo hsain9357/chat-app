@@ -1,16 +1,17 @@
 <?php
   session_start();
   if(isset($_SESSION['unique_id'])){
-    header("location: users.php");
+    header("location: /users.php");
   }
 ?>
 <?php
 
 $shoudGetStartedButtonAppear =  false;
 $isDarkText =  false;
+$styleMain = true;
 ?>
-<?php include_once "header.php"; ?>
-<?php include_once "header2.php"; ?>
+<?php include_once "./util/header.php"; ?>
+<?php include_once "./util/header2.php"; ?>
 <body>
   <div class="wrapper signin">
     <section class="form signup">
@@ -44,12 +45,12 @@ $isDarkText =  false;
           <input type="submit" name="submit" value="Continue to Chat">
         </div>
       </form>
-      <div class="link">Already signed up? <a href="login.php">Login now</a></div>
+      <div class="link">Already signed up? <a href="/login.php">Login now</a></div>
     </section>
   </div>
 
-  <script src="javascript/pass-show-hide.js"></script>
-  <script src="javascript/signup.js"></script>
+  <script src="/javascript/pass-show-hide.js"></script>
+  <script src="/javascript/signup.js"></script>
 
 </body>
 </html>

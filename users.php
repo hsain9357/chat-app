@@ -16,13 +16,14 @@
 
 $shoudGetStartedButtonAppear =  false;
 $isDarkText = true;
+$styleMain = true;
 ?>
-<?php include_once "header.php"; ?>
-<link rel="stylesheet" href="users.css">
+<?php include_once "./util/header.php"; ?>
+<link rel="stylesheet" href="/css/users.css">
 
 
 <body class='chat'>
-<?php include_once "header2.php"; ?>
+<?php include_once "./util/header2.php"; ?>
 <div class="wrapper userswrapper <?php echo isset($_GET['user_id'])?"actv":"" ?>">
     <section class="users">
       <header class="chat">

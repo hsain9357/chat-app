@@ -41,7 +41,7 @@ if($shoudGetStartedButtonAppear){
 <span><?php echo $row['fname']?><span class="activeImg">🟢</span></span>
 
 <a href="#" class="profile_image">
-          <img src="php/images/<?php echo $row['img']; ?>" class ="profile_image" alt="">
+          <img src="/php/images/<?php echo $row['img']; ?>" class ="profile_image" alt="">
 </a>
 
 <ul class="options">
@@ -49,7 +49,7 @@ if($shoudGetStartedButtonAppear){
 <a href="">Change image</a>
 </li>
 <li>
-<a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
+<a href="/php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
 
 </li>
 <li>
