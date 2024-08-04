@@ -1,13 +1,13 @@
 <?php
-  session_start();
-  if(isset($_SESSION['unique_id'])){
+session_start();
+if (isset($_SESSION["unique_id"])) {
     header("location: /users.php");
-  }
+}
 ?>
 
 <?php
-$shoudGetStartedButtonAppear =  false;
-$styleMain =  true;
+$shoudGetStartedButtonAppear = false;
+$styleMain = true;
 ?>
 
 <?php include_once "./util/header.php"; ?>
@@ -37,7 +37,7 @@ $styleMain =  true;
 
   <script src="./javascript/pass-show-hide.js"></script>
   <script src="./javascript/login.js"></script>
-<?php include_once "./util/footer.php" ?>
+<?php include_once "./util/footer.php"; ?>
 
 </body>
 </html>

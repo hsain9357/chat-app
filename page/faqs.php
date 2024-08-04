@@ -9,8 +9,8 @@
 
 <?php
 $shoudGetStartedButtonAppear = true;
-$currPage = "faqs"
- ?>
+$currPage = "faqs";
+?>
   <?php include_once "../util/header.php"; ?>
   <link rel="icon" type="image/png" sizes="32x32" href="../resources/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -80,7 +80,7 @@ $currPage = "faqs"
       </div>
     </div>
   </div>
-<?php include_once "../util/footer.php" ?>
+<?php include_once "../util/footer.php"; ?>
 </body>
 
 </html>

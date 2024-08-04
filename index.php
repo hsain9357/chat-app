@@ -1,6 +1,5 @@
 <?php
-session_start();
-?>
+session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,7 @@ session_start();
 <body class="home">
 
 <?php
-$shoudGetStartedButtonAppear =  true;
+$shoudGetStartedButtonAppear = true;
 $currPage = "home";
 $isLightText = true;
 ?>
@@ -30,6 +29,6 @@ Connect with your friends <br/> and family
 </div>
 </section>
 
-<?php include_once "./util/footer.php" ?>
+<?php include_once "./util/footer.php"; ?>
 </body>
 </html>

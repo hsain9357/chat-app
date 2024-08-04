@@ -3,21 +3,22 @@
 <html>
     <head>
 <?php
- $shoudGetStartedButtonAppear=true;
+$shoudGetStartedButtonAppear = true;
 $currPage = "contact";
- ?>
-<?php
-//contact info
-$info = ['location'=> 'Iraq',
-'email' => 'hsain9357@gmail.com',
-'phoneNumber' => '+9647859753058',
-'facebookURL' => 'https://www.facebook.com/nassosanagn/',
-'instaURL' => 'https://www.instagram.com/nassosanagn_/?hl=el',
-'twitterURL' => 'https://twitter.com/nassosanagn',
-'linkedinURL' => 'https://www.linkedin.com/in/nassos-anagnostopoulos-2b9631196/'
-]
 ?>
-    <?php include_once "../util/header.php" ?>
+<?php //contact info
+
+$info = [
+    "location" => "Iraq",
+    "email" => "hsain9357@gmail.com",
+    "phoneNumber" => "+9647859753058",
+    "facebookURL" => "https://www.facebook.com/nassosanagn/",
+    "instaURL" => "https://www.instagram.com/nassosanagn_/?hl=el",
+    "twitterURL" => "https://twitter.com/nassosanagn",
+    "linkedinURL" =>
+        "https://www.linkedin.com/in/nassos-anagnostopoulos-2b9631196/",
+]; ?>
+    <?php include_once "../util/header.php"; ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ChatMe | Contact Us </title>
@@ -35,7 +36,7 @@ $info = ['location'=> 'Iraq',
     <link rel="stylesheet" href="/css/contact.css">
     </head>
     <body>
-<?php include_once "../util/header2.php" ?>
+<?php include_once "../util/header2.php"; ?>
         <section>
             <div class="container">
                 <div class="contactInfo">
@@ -44,24 +45,34 @@ $info = ['location'=> 'Iraq',
                         <ul class="info">
                             <li>
                                 <span><img src="/resources/contact/location.png"></span>
-                                <span><?php echo $info['location'] ?></span>
+                                <span><?php echo $info["location"]; ?></span>
                             </li>
                             <li>
                                 <span><img src="/resources/contact/mail.png"></span>
-                                <span><a href = "mailto: <?php echo $info['email'] ?>"><?php echo $info['email'] ?></a></span>
+                                <span><a href = "mailto: <?php echo $info[
+                                    "email"
+                                ]; ?>"><?php echo $info["email"]; ?></a></span>
                             </li>
                             <li>
                                 <span><img src="/resources/contact/call.png"></span>
-                                <span><?php echo $info['phoneNumber'] ?></span>
+                                <span><?php echo $info["phoneNumber"]; ?></span>
                             </li>
 
                         </ul>
                     </div>
                     <ul class="sci">
-                        <li><a href="<?php echo $info['facebookURL'] ?>"><img src="/resources/contact/1.png"></a></li>
-                        <li><a href="<?php echo $info['instaURL'] ?>"><img src="/resources/contact/3.png"></a></li>
-                        <li><a href="<?php echo $info['twitterURL'] ?>"><img src="/resources/contact/2.png"></a></li>
-                        <li><a href="<?php echo $info['linkedinURL'] ?>"><img src="/resources/contact/5.png"></a></li>
+                        <li><a href="<?php echo $info[
+                            "facebookURL"
+                        ]; ?>"><img src="/resources/contact/1.png"></a></li>
+                        <li><a href="<?php echo $info[
+                            "instaURL"
+                        ]; ?>"><img src="/resources/contact/3.png"></a></li>
+                        <li><a href="<?php echo $info[
+                            "twitterURL"
+                        ]; ?>"><img src="/resources/contact/2.png"></a></li>
+                        <li><a href="<?php echo $info[
+                            "linkedinURL"
+                        ]; ?>"><img src="/resources/contact/5.png"></a></li>
 
                     </ul>
                 </div>
@@ -97,6 +108,6 @@ $info = ['location'=> 'Iraq',
 
 
         </section>
-<?php include_once "../util/footer.php" ?>
+<?php include_once "../util/footer.php"; ?>
     </body>
 </html>
