@@ -15,7 +15,7 @@ $styleMain =  true;
 <body>
   <div class="wrapper signin">
     <section class="form login">
-      <h2>Realtime Chat App</h2>
+      <h2>Login</h2>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
         <div class="field input">
@@ -37,6 +37,7 @@ $styleMain =  true;
 
   <script src="./javascript/pass-show-hide.js"></script>
   <script src="./javascript/login.js"></script>
+<?php include_once "./util/footer.php" ?>
 
 </body>
 </html>

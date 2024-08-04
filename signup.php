@@ -15,7 +15,7 @@ $styleMain = true;
 <body>
   <div class="wrapper signin">
     <section class="form signup">
-      <h1>Realtime Chat App</h1>
+      <h1>Signup</h1>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
         <div class="name-details">
@@ -51,6 +51,7 @@ $styleMain = true;
 
   <script src="/javascript/pass-show-hide.js"></script>
   <script src="/javascript/signup.js"></script>
+<?php include_once "./util/footer.php" ?>
 
 </body>
 </html>

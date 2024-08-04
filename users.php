@@ -17,6 +17,8 @@
 $shoudGetStartedButtonAppear =  false;
 $isDarkText = true;
 $styleMain = true;
+$nofooter = true;
+$currPage = 'chats';
 ?>
 <?php include_once "./util/header.php"; ?>
 <link rel="stylesheet" href="/css/users.css">
@@ -72,7 +74,7 @@ $styleMain = true;
       <header>
 <?php
 if(!isset($_GET['user_id'])){
-echo "<h1 style='position:absolute; top:50%; left:50%; transform:translate(-50%,-50%)'>No Chat Selected</h1>";
+echo "<h1 style='position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:var(--color-secondary);'>No Chat Selected</h1>";
 }
 
 ?>
@@ -113,6 +115,5 @@ if(isset($_GET['user_id'])){
 ?>
 </div>
 <!-- chat section ends-->
-
 </body>
 </html>

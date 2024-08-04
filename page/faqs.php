@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
-<?php $shoudGetStartedButtonAppear = true; ?>
+<?php
+$shoudGetStartedButtonAppear = true;
+$currPage = "faqs"
+ ?>
   <?php include_once "../util/header.php"; ?>
   <link rel="icon" type="image/png" sizes="32x32" href="../resources/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -76,6 +80,7 @@
       </div>
     </div>
   </div>
+<?php include_once "../util/footer.php" ?>
 </body>
 
 </html>

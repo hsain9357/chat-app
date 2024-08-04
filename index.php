@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
 <script src="./util/header.js" async></script>
     <title>ChatMe</title>
 </head>
@@ -26,10 +30,6 @@ Connect with your friends <br/> and family
 </div>
 </section>
 
-
-<footer>
-
-<ul><li><a href="privicy">privecy</a></li></ul>
-</footer>
+<?php include_once "./util/footer.php" ?>
 </body>
 </html>
