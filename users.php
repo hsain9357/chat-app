@@ -114,7 +114,7 @@ $currPage = "chats";
       </form>
     </section>
 
-  <script src="javascript/chat.js"></script>
+  <script src="javascript/ch.js"></script>
 <?php } ?>
 </div>
 <!-- chat section ends-->
