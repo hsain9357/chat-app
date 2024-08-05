@@ -83,7 +83,7 @@ if (isset($_SESSION["unique_id"])) {
         >
       </li>
       <li>
-        <a href="">Delete Account</a>
+        <a href="/php/delete.php?del_id=<?php echo $row2["unique_id"]; ?>">Delete Account</a>
       </li>
     </ul>
   </div>

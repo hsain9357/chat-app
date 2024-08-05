@@ -3,6 +3,7 @@
 
 body {
   margin-top: 0;
+  display: none;
 }
 
 section.banner {
@@ -11,16 +12,21 @@ section.banner {
   justify-content: center;
   align-items: center;
 }
-
-section.banner .img {
+section.banner .bg-img {
   height: 100vh;
   width: 100%;
   position: relative;
   z-index: 1;
-  background-image: url("/resources/banner.jpg");
   background-repeat: none;
-  background-size: cover;
-  background-position: 0 0;
+  overflow: hidden;
+}
+section.banner .bg-img img.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  -o-object-position: left;
+  -o-object-fit: conver;
 }
 
 section.banner .slogan.active {

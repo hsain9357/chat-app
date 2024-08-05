@@ -18,11 +18,14 @@ $info = [
     "linkedinURL" =>
         "https://www.linkedin.com/in/nassos-anagnostopoulos-2b9631196/",
 ]; ?>
+
+
     <?php include_once "../util/header.php"; ?>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ChatMe | Contact Us </title>
-    <link rel="shortcut icon" type="image/jpg" href="/resources/contact/news2.png"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');

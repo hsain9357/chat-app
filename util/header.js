@@ -1,4 +1,5 @@
 const navbar = document.querySelector(".navbar");
+const header = document.querySelector("header.header");
 const profile_image = document.querySelector("a.profile_image");
 const options_humb = document.querySelector(".options_humb");
 const options = document.querySelectorAll("ul.options");
@@ -6,6 +7,8 @@ const humberger = document.querySelector(".humberger");
 const slogan = document.querySelector(".slogan");
 const html = document.querySelector("html");
 const body = document.querySelector("body");
+var sticky = header.offsetTop;
+
 let ishumclicked = false;
 let isimgclicked = false;
 if (profile_image) profile_image.addEventListener("click", handleOptions);
@@ -38,4 +41,16 @@ humberger.addEventListener("click", () => {
 
 if (window.innerWidth <= 658) {
   navbar.classList.add("dropdown");
+}
+
+window.onscroll = function () {
+  myFunction();
+};
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }
